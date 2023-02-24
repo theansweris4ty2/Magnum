@@ -4,7 +4,7 @@
   "description": "Magnum Towers",
   "default": "index.html",
   "scripts": {
-    "start": "parcel ./public/index.html",
+    "start": "parcel index.html",
     "build": "parcel build ./public/index.html --dist-dir ./dist"
   },
   "author": "Marty Dixon",
