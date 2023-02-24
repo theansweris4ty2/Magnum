@@ -1,0 +1,2 @@
+const form=document.querySelector("form"),nav=document.querySelector("nav"),slider=document.querySelector(".slider"),sendFormInfo=async()=>{const o=[...new FormData(form)],e=Object.fromEntries(o);try{await axios.post("/magnum-towers",e)}catch(o){console.log(o)}};"http://localhost:3000/contact.html"===window.location.href&&form.addEventListener("submit",(o=>{o.preventDefault(),sendFormInfo(),form.reset()}));
+//# sourceMappingURL=index.4732d0ca.js.map
