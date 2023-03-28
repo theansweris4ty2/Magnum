@@ -4,8 +4,9 @@
   "description": "Magnum Towers",
   "default": "index.html",
   "scripts": {
-    "dev": "parcel ./public/index.html",
-    "build": "parcel build ./public/index.html --dist-dir ./dist"
+    "start": "parcel ./public/index.html",
+    "build": "parcel build ./public/index.html --dist-dir ./dist",
+    "dev": "nodemon app.js"
   },
   "author": "Marty Dixon",
   "license": "ISC",

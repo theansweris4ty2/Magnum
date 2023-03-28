@@ -18,7 +18,10 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
-
+a {
+  text-decoration: none;
+  color: black;
+}
 header {
   height: 100px;
   display: grid;
@@ -72,6 +75,7 @@ nav a {
 
 nav a:hover {
   color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 .card {
   grid-column: span 4;
@@ -207,11 +211,12 @@ form button {
 }
 .panel.introduction a {
   margin-right: 10px;
-  font-size: 1.5em;
+  font-size: 1.55em;
   color: #a8a8a8;
 }
 .panel.introduction a:hover {
   color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 .panel.introduction p {
   color: #a8a8a8;
@@ -251,67 +256,174 @@ form button {
 
 .products-body {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: #ddd;
-  background-image: url('images/welding-min.png');
+  grid-template-columns: repeat(12, 1fr);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-image: url('images/hero-image-min.jpg');
   background-size: cover;
-  background-position: fixed;
   background-repeat: no-repeat;
-  background-blend-mode: luminosity;
-  background-color: #f5f5f5;
+  background-attachment: fixed;
+  background-blend-mode: screen;
+  background-color: #889696;
 }
 
-.product-section {
-  grid-column: 2 / span 1;
-  margin-top: 100px;
-  height: 100px;
-  background-color: #a8a8a8;
-  padding: 15px;
-  font-weight: 800;
+.products-main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-row: 2, span 1;
+  grid-column: span 12;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr 1fr;
+}
+.products-row.one {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: span;
+  height: 100%;
+  position: relative;
+  grid-row: 1 / span 1;
+  grid-column: span 1;
+  margin-top: 10px;
+}
+.products-row.two {
+  grid-row: 2 / span 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: span;
+  height: 100%;
+  position: relative;
+  grid-column: span 1;
+  margin-top: 10px;
+}
+
+.products-card {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  border-radius: 6px;
+  grid-column: span 1;
+  flex-direction: column;
+  grid-row: span 1;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 800px;
+  max-height: 100%;
+  position: relative;
+}
+.products-card img {
+  object-fit: scale-down;
+  z-index: -1;
+  grid-column: span 1;
+  margin: 0;
+}
+.products-card a {
+  text-decoration: none;
+  justify-self: center;
+  align-self: center;
+  position: absolute;
+  top: 200px;
+  font-size: 3em;
+  font-weight: 800;
   color: black;
-  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.6);
-  opacity: 0.8;
+  text-shadow: 0.5px 0.5px 0.5px rgb(255, 255, 255);
 }
-.product-section a {
-  font-size: 2em;
-  margin-left: 30px;
-}
-.product-section a:hover {
+.products-card a:hover {
   color: white;
-}
-
-.product-section img {
-  max-height: 100px;
-  border-radius: 6px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .products-header {
-  grid-column: 1 / span 2;
+  grid-row: 1 span 1;
   display: grid;
   grid-template-columns: repeat(12 1fr);
   height: 0;
-  position: absolute;
+  position: fixed;
 }
 .products-header nav {
   grid-column: span 12;
   justify-self: start;
 }
 .products-header nav a {
-  font-size: 1.5em;
+  font-size: 1em;
   margin-right: 30px;
   color: black;
 }
 .products-header nav a:hover {
   color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-.product-section.one {
-  margin-top: 300px;
+.drop-down-menu {
+  height: 800px;
+  width: 100%;
+  font-size: 1em;
+  font-weight: 800;
+  justify-content: center;
+  transition: all 1.5s ease-in-out;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: max-content;
+  grid-column: span 4;
+  grid-row: span 1;
+  align-self: center;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: -1;
+  gap: 50px;
+  margin: 0;
 }
+
+.hidden {
+  height: 0;
+  width: 0;
+  font-size: 0;
+}
+.menu-button {
+  height: 50px;
+  width: 100px;
+  font-size: 2em;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  opacity: 0.3;
+}
+.menu-button:hover {
+  color: white;
+  opacity: 1;
+  box-shadow: none;
+}
+.hidden-button {
+  width: 0px;
+  height: 0px;
+  font-size: 0px;
+  opacity: 0;
+}
+.menu-cell {
+  grid-column: span 2;
+  grid-row: span 1;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  text-align: center;
+}
+.product-image {
+  transition: all 1.5s ease-in-out;
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.product-paragraph {
+  grid-column: 3 / span 3;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-weight: 800;
+}
+/* .menu-cell ul {
+  text-align: ;
+  margin-left: 50px; 
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 800;
+  grid-column: 4 / span 1;
+} */
 
 @media screen and (max-width: 1200px) {
   .welcome h1 {
@@ -329,9 +441,6 @@ form button {
   }
   .panel.introduction h1 {
     font-size: 3em;
-  }
-  .product-section a {
-    font-size: 1.5em;
   }
 }
 
@@ -365,19 +474,6 @@ form button {
   }
   #message {
     grid-column: 7 / span 5;
-  }
-  .product-section {
-    margin-top: 50px;
-    grid-column: 1 / span 2;
-  }
-  .product-section.one {
-    margin-top: 200px;
-  }
-  .product-section a {
-    font-size: 1.2em;
-  }
-  .products-body header nav a {
-    font-size: 1.1em;
   }
 }
 @media screen and (max-width: 768px) {
@@ -424,18 +520,6 @@ form button {
   }
   li {
     margin-left: 10px;
-  }
-  .products-body {
-    background-position: center;
-    height: 600px;
-  }
-  .products-body header nav a {
-    font-size: 1em;
-  }
-  .product-section {
-    grid-column: 1 / span 2;
-    height: 80px;
-    margin-top: 20px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -488,21 +572,6 @@ form button {
   #message {
     grid-column: 8 / span 5;
   }
-  .product-section {
-    grid-column: 1 / span 2;
-    height: 80px;
-    margin-top: 0px;
-  }
-  .products-body {
-    height: 660px;
-  }
-  .product-section {
-    height: 70px;
-    margin-top: 0px;
-  }
-  .product-section img {
-    height: 80px;
-  }
 }
 @media screen and (max-width: 390px) {
   .card {
@@ -527,27 +596,5 @@ form button {
   }
   form button {
     grid-column: 5 / span 4;
-  }
-  .products-body {
-    background-size: cover;
-    height: 1380px;
-    grid-auto-rows: 300px;
-  }
-
-  .product-section {
-    width: 600px;
-    margin-top: 250px;
-    height: 100px;
-    align-self: start;
-    font-size: 2em;
-  }
-  .product-section.one {
-    margin-top: 600px;
-  }
-  .product-section.two {
-    margin-top: 450px;
-  }
-  .product-section.three {
-    margin-top: 300px;
   }
 }
