@@ -4,6 +4,7 @@ const dropDownLink = document.querySelectorAll('.drop-down-link')
 const dropDownMenu = document.querySelectorAll('.drop-down-menu')
 const productImage = document.querySelectorAll('.product-image')
 const header = document.querySelector('header')
+const footer = document.querySelector('footer')
 const buttons = document.querySelectorAll('.menu-button')
 
 const sendFormInfo = async () => {
@@ -32,7 +33,11 @@ buttons.forEach((btn) =>
       im.style.height = '0px'
     })
     btn.classList.add('hidden-button')
-    header.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    header.scrollIntoView({
+      // behavior: 'smooth',
+      block: 'start',
+      inline: 'center',
+    })
   })
 )
 
@@ -43,15 +48,19 @@ dropDownLink.forEach((link) => {
     const dropDown = document.querySelector(`#${id}`)
     dropDownMenu.forEach((menu) => menu.classList.add('hidden'))
     dropDown.classList.remove('hidden')
-    dropDown.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    dropDown.scrollIntoView({
+      // behavior: 'smooth',
+      block: 'start',
+      inline: 'center',
+    })
 
     productImage.forEach((im) => {
       im.style.width = '0px'
       im.style.height = '0px'
       const menuImage = document.querySelectorAll(`.${id}`)
       menuImage.forEach((im) => {
-        im.style.width = '300px'
-        im.style.height = '200px'
+        im.style.width = '100%'
+        im.style.height = '100%'
       })
     })
     buttons.forEach((btn) => {
