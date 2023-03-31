@@ -1,10 +1,8 @@
 const form = document.querySelector('form')
-const nav = document.querySelector('nav')
 const dropDownLink = document.querySelectorAll('.drop-down-link')
 const dropDownMenu = document.querySelectorAll('.drop-down-menu')
 const productImage = document.querySelectorAll('.product-image')
 const header = document.querySelector('header')
-const footer = document.querySelector('footer')
 const buttons = document.querySelectorAll('.menu-button')
 
 const sendFormInfo = async () => {
