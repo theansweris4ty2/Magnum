@@ -311,21 +311,20 @@ form button {
   object-fit: scale-down;
   z-index: -1;
   grid-column: span 1;
-  margin: 0;
 }
 .products-card a {
   text-decoration: none;
   align-self: center;
   position: absolute;
-  top: 60%;
-  font-size: 3em;
+  top: 75%;
+  font-size: 2.5em;
   font-weight: 800;
-  color: black;
-  text-shadow: 0.5px 0.5px 0.5px rgb(255, 255, 255);
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 .products-card a:hover {
-  color: white;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 2px rgba(255, 255, 255);
+  color: black;
 }
 
 .products-header {
@@ -416,8 +415,8 @@ form button {
 }
 .product-paragraph {
   grid-column: 1 / span 3;
-  font-size: 1.5em;
-  line-height: 1.5em;
+  font-size: 1.25em;
+  line-height: 1.25em;
   font-weight: 800;
   max-width: 100%;
   transition: height 700ms, ease-in, width 700ms ease-in,
