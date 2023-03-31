@@ -463,7 +463,7 @@ form button {
   }
   header nav {
     grid-column: 1 / span 12;
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
 
   .panel.introduction nav {
@@ -489,7 +489,7 @@ form button {
     font-size: 2em;
   }
   .card {
-    font-size: 0.75em;
+    font-size: 0.7em;
   }
   .card button {
     max-width: 100%;
@@ -533,6 +533,7 @@ form button {
   .card {
     margin-right: 20px;
     margin-left: 20px;
+    padding: 5px;
   }
   li {
     margin-left: 10px;
