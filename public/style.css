@@ -438,6 +438,7 @@ form button {
   }
   header nav {
     grid-column: 2 / span 9;
+    justify-content: space-between;
   }
   .panel.introduction nav {
     font-size: 0.7em;
@@ -461,7 +462,6 @@ form button {
   }
   header nav {
     grid-column: 1 / span 12;
-    justify-content: space-between;
     font-size: 1.5em;
   }
 
