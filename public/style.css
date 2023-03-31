@@ -461,7 +461,10 @@ form button {
   }
   header nav {
     grid-column: 1 / span 12;
+    justify-content: space-between;
+    font-size: 1.5em;
   }
+
   .panel.introduction nav {
     display: flex;
     flex-direction: column;
@@ -483,9 +486,6 @@ form button {
 @media screen and (max-width: 768px) {
   .welcome h1 {
     font-size: 2em;
-  }
-  header nav a {
-    font-size: 0.8em;
   }
   .card {
     font-size: 0.75em;
@@ -538,6 +538,9 @@ form button {
   }
 }
 @media screen and (max-width: 576px) {
+  header nav a {
+    font-size: 0.8em;
+  }
   .panel.introduction,
   .panel.about {
     grid-column: span 2;
