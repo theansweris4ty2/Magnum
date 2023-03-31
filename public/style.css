@@ -79,6 +79,7 @@ nav a {
 
 .welcome img {
   filter: saturate(50%);
+  margin-bottom: 20px;
 }
 
 nav a:hover {
