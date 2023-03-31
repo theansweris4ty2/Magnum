@@ -600,6 +600,9 @@ form button {
     width: 150px;
     height: 75px;
   }
+  .menu-button {
+    margin-top: 40px;
+  }
 }
 @media screen and (max-width: 390px) {
   .card {
@@ -618,6 +621,9 @@ form button {
     grid-column: span 3;
     width: 125px;
     height: 62px;
+  }
+  .drop-down-menu ul {
+    grid-column: span 5;
   }
   .welcome img {
     height: 40px;
