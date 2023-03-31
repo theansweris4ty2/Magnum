@@ -7,6 +7,7 @@ body {
   font-family: 'Poppins';
   width: 100%;
 }
+
 .home,
 .contact,
 .five-year {
@@ -286,7 +287,6 @@ form button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 100%;
-  /* height: 100%; */
   position: relative;
   grid-row: 1 / span 1;
   grid-column: span 1;
@@ -353,8 +353,9 @@ form button {
   width: 100%;
   font-size: 1em;
   font-weight: 800;
+  transition: height 700ms, ease-in, width 700ms ease-in,
+    font-size 700ms ease-in;
   justify-content: center;
-  transition: all 1.5s ease-in-out;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: max-content;
@@ -382,6 +383,8 @@ form button {
   border: none;
   box-shadow: none;
   opacity: 0.3;
+  transition: height 700ms, ease-in, width 700ms ease-in,
+    font-size 700ms ease-in;
 }
 .menu-button:hover {
   color: white;
@@ -402,11 +405,14 @@ form button {
   text-align: center;
   width: 200px;
   height: 200px;
+  transition: height 700ms, ease-in, width 700ms ease-in,
+    font-size 700ms ease-in;
 }
 .product-image {
-  transition: all 1.5s ease-in-out;
   grid-column: span 2;
   grid-row: span 1;
+  transition: height 700ms, ease-in, width 700ms ease-in,
+    font-size 700ms ease-in;
 }
 .product-paragraph {
   grid-column: 1 / span 3;
@@ -414,9 +420,13 @@ form button {
   line-height: 1.5em;
   font-weight: 800;
   max-width: 100%;
+  transition: height 700ms, ease-in, width 700ms ease-in,
+    font-size 700ms ease-in;
 }
 .drop-down-menu ul {
   grid-column: span 3;
+  transition: height 700ms, ease-in, width 700ms ease-in,
+    font-size 700ms ease-in;
 }
 
 @media screen and (max-width: 1279px) {

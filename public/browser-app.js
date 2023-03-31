@@ -47,7 +47,8 @@ dropDownLink.forEach((link) => {
     const id = e.target.getAttribute('dataset')
     const dropDown = document.querySelector(`#${id}`)
     dropDownMenu.forEach((menu) => menu.classList.add('hidden'))
-    dropDown.classList.remove('hidden')
+    setTimeout(() => dropDown.classList.remove('hidden'), 700)
+
     dropDown.scrollIntoView({
       // behavior: 'smooth',
       block: 'start',
@@ -59,8 +60,10 @@ dropDownLink.forEach((link) => {
       im.style.height = '0px'
       const menuImage = document.querySelectorAll(`.${id}`)
       menuImage.forEach((im) => {
-        im.style.width = '100%'
-        im.style.height = '100%'
+        setTimeout(() => {
+          im.style.width = '100%'
+          im.style.height = '100%'
+        }, 1000)
       })
     })
     buttons.forEach((btn) => {
