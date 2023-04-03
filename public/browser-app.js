@@ -4,6 +4,30 @@ const dropDownMenu = document.querySelectorAll('.drop-down-menu')
 const productImage = document.querySelectorAll('.product-image')
 const header = document.querySelector('header')
 const buttons = document.querySelectorAll('.menu-button')
+const slides = document.querySelectorAll('.slide')
+const prevSlideBtn = document.querySelector('.previous.slide-button')
+const nextSlideBtn = document.querySelector('.next.slide-button')
+let currentSlide = 0
+const maxSlide = slides.length
+
+const changeSlide = (slide) => {
+  slides.forEach((s, i) => {
+    s.style.transform = `translateX(${(i - slide) * 100}%)`
+  })
+}
+if (window.location.href === 'http://localhost:3000/index.html') {
+  nextSlideBtn.addEventListener('click', () => {
+    currentSlide === maxSlide - 1 ? (currentSlide = 0) : currentSlide++
+    changeSlide(currentSlide)
+  })
+}
+if (window.location.href === 'http://localhost:3000/index.html') {
+  prevSlideBtn.addEventListener('click', () => {
+    currentSlide === 0 ? (currentSlide = maxSlide - 1) : currentSlide--
+    changeSlide(currentSlide)
+    console.log(currentSlide)
+  })
+}
 
 const sendFormInfo = async () => {
   const dataArray = [...new FormData(form)]
@@ -16,7 +40,7 @@ const sendFormInfo = async () => {
   }
 }
 
-if (window.location.href === 'http://localhost:3000/contact.html')
+if (window.location.href === 'https://magnum-towers.netlify.app/contact.html')
   form.addEventListener('submit', (e) => {
     e.preventDefault()
     sendFormInfo()
