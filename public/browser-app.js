@@ -15,19 +15,21 @@ const changeSlide = (slide) => {
     s.style.transform = `translateX(${(i - slide) * 100}%)`
   })
 }
-if (window.location.href === 'http://localhost:3000/index.html') {
+
+if (nextSlideBtn) {
   nextSlideBtn.addEventListener('click', () => {
     currentSlide === maxSlide - 1 ? (currentSlide = 0) : currentSlide++
     changeSlide(currentSlide)
   })
 }
-if (window.location.href === 'http://localhost:3000/index.html') {
+
+if (prevSlideBtn) {
   prevSlideBtn.addEventListener('click', () => {
     currentSlide === 0 ? (currentSlide = maxSlide - 1) : currentSlide--
     changeSlide(currentSlide)
-    console.log(currentSlide)
   })
 }
+changeSlide(0)
 
 const sendFormInfo = async () => {
   const dataArray = [...new FormData(form)]
