@@ -15,13 +15,13 @@ const changeSlide = (slide) => {
     s.style.transform = `translateX(${(i - slide) * 100}%)`
   })
 }
-if (window.location.href === 'https://magnum-towers.netlify.app/index.html') {
+if (window.location.href === 'https://magnum-towers.netlify.app') {
   nextSlideBtn.addEventListener('click', () => {
     currentSlide === maxSlide - 1 ? (currentSlide = 0) : currentSlide++
     changeSlide(currentSlide)
   })
 }
-if (window.location.href === 'https://magnum-towers.netlify.app/index.html') {
+if (window.location.href === 'https://magnum-towers.netlify.app') {
   prevSlideBtn.addEventListener('click', () => {
     currentSlide === 0 ? (currentSlide = maxSlide - 1) : currentSlide--
     changeSlide(currentSlide)
