@@ -1,0 +1,49 @@
+@media screen and (max-width: 768px) {
+  .welcome h1 {
+    font-size: 2em;
+  }
+  .products-card {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .product-paragraph {
+    grid-column: span 5;
+  }
+  .products-card a {
+    position: absolute;
+    top: 180px;
+  }
+  .menu-cell {
+    width: 200px;
+    height: 100px;
+  }
+  .history {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .panel.introduction,
+  .panel.about {
+    grid-column: span 1;
+  }
+  .panel.leadership {
+    grid-column: span 2;
+  }
+
+  form {
+    padding: 10px;
+  }
+  .warranty {
+    grid-column: 1.5 / span 11;
+    padding: 15px;
+    font-size: 0.8em;
+  }
+  .warranty p {
+    grid-column: span 12;
+    justify-self: center;
+    max-width: 100%;
+  }
+  .slider {
+    width: 500px;
+    height: 300px;
+  }
+}
