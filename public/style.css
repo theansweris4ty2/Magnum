@@ -385,8 +385,7 @@ form button {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 .drop-down-menu {
-  max-height: 100%;
-  height: 300px;
+  max-height: 280px;
   width: 100%;
   font-size: 1em;
   font-weight: 800;
@@ -528,6 +527,9 @@ form button {
   }
   #message {
     grid-column: 7 / span 5;
+  }
+  .drop-down-menu ul {
+    grid-column: span 4;
   }
 }
 @media screen and (max-width: 768px), screen and (orientation: portrait) {
