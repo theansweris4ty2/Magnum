@@ -124,6 +124,10 @@ nav a:hover {
   position: relative;
   overflow: hidden;
 }
+/* .slider-label {
+  position: absolute;
+  top: 90%;
+} */
 .slide {
   position: absolute;
   top: 0;
@@ -453,8 +457,7 @@ form button {
   transition: height 700ms, ease-in, width 700ms ease-in,
     font-size 700ms ease-in;
 }
-
-/* @media screen and (max-width: 1279px) {
+@media screen and (max-width: 1279px) {
   .welcome {
     margin-top: 20px;
   }
@@ -478,9 +481,8 @@ form button {
     position: absolute;
     top: 160px;
   }
-} */
-
-/* @media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 992px), screen and (orientation: portrait) {
   .welcome h1 {
     font-size: 2.5em;
   }
@@ -513,8 +515,8 @@ form button {
   #message {
     grid-column: 7 / span 5;
   }
-} */
-/* @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px), screen and (orientation: portrait) {
   .welcome h1 {
     font-size: 2em;
   }
@@ -562,8 +564,8 @@ form button {
     width: 500px;
     height: 300px;
   }
-} */
-/* @media screen and (max-width: 576px) {
+}
+@media screen and (max-width: 576px), screen and (orientation: portrait) {
   header nav a {
     font-size: 0.8em;
   }
@@ -639,8 +641,8 @@ form button {
   .drop-down-menu ul {
     grid-column: span 6;
   }
-} */
-/* @media screen and (max-width: 390px) {
+}
+@media screen and (max-width: 390px), screen and (orientation: portrait) {
   .products-card {
     grid-column: span 4;
   }
@@ -681,4 +683,4 @@ form button {
     width: 380px;
     height: 230px;
   }
-} */
+}
