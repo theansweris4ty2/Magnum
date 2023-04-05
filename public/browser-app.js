@@ -12,20 +12,29 @@ const maxSlide = slides.length
 
 const changeSlide = (slide) => {
   slides.forEach((s, i) => {
+    s.style.opacity = 0
     s.style.transform = `translateX(${(i - slide) * 100}%)`
+    slides[currentSlide].style.transition = 'transform 1200ms, opacity 1400ms'
+    slides[currentSlide].style.opacity = 1
   })
 }
-
+if (prevSlideBtn) {
+  currentSlide === 0 ? prevSlideBtn.classList.add('hidden') : ''
+}
 if (nextSlideBtn) {
   nextSlideBtn.addEventListener('click', () => {
-    currentSlide === maxSlide - 1 ? (currentSlide = 0) : currentSlide++
+    currentSlide === maxSlide - 1 ? '' : currentSlide++
+    prevSlideBtn.classList.remove('hidden')
+    currentSlide === maxSlide - 1 ? nextSlideBtn.classList.add('hidden') : ''
     changeSlide(currentSlide)
   })
 }
 
 if (prevSlideBtn) {
   prevSlideBtn.addEventListener('click', () => {
-    currentSlide === 0 ? (currentSlide = maxSlide - 1) : currentSlide--
+    currentSlide === 0 ? '' : currentSlide--
+    nextSlideBtn.classList.remove('hidden')
+    currentSlide === 0 ? prevSlideBtn.classList.add('hidden') : ''
     changeSlide(currentSlide)
   })
 }
@@ -36,13 +45,13 @@ const sendFormInfo = async () => {
   const data = Object.fromEntries(dataArray)
 
   try {
-    await axios.post('/magnum-towers', data)
+    await axios.post('/', data)
   } catch (err) {
     console.log(err)
   }
 }
 
-if (window.location.href === 'https://magnum-towers.netlify.app/contact.html')
+if (form)
   form.addEventListener('submit', (e) => {
     e.preventDefault()
     sendFormInfo()

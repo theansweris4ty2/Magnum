@@ -103,17 +103,20 @@ nav a:hover {
   width: 50px;
   height: 60px;
   background: transparent;
-  border: none;
+  border: transparent;
   font-weight: 800;
   font-size: 4em;
 }
+.slide-button :hover {
+  color: white;
+}
 .previous {
   position: absolute;
-  bottom: 40px;
+  bottom: 45%;
 }
 .next {
   position: absolute;
-  bottom: 40px;
+  bottom: 45%;
   right: 15px;
 }
 .slider {
@@ -133,12 +136,11 @@ nav a:hover {
   width: 100%;
   height: 100%;
   z-index: -1;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  transition: transform 1s;
+  opacity: 0;
+  transition: opacity 3000ms ease-in;
 }
 .slide > img {
   object-fit: cover;
