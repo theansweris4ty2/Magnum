@@ -58,7 +58,6 @@ buttons.forEach((btn) =>
     })
     btn.classList.add('hidden-button')
     header.scrollIntoView({
-      // behavior: 'smooth',
       block: 'start',
       inline: 'center',
     })
@@ -74,7 +73,6 @@ dropDownLink.forEach((link) => {
     setTimeout(() => dropDown.classList.remove('hidden'), 700)
 
     dropDown.scrollIntoView({
-      // behavior: 'smooth',
       block: 'start',
       inline: 'center',
     })
