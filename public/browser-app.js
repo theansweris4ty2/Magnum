@@ -36,7 +36,7 @@ const sendFormInfo = async () => {
   const data = Object.fromEntries(dataArray)
 
   try {
-    await axios.post('/magnum-towers', data)
+    await axios.post('/', data)
   } catch (err) {
     console.log(err)
   }
